@@ -1,0 +1,49 @@
+<div class="loginContainer">
+  <div class="loginBox" [formGroup]="form">
+    <h1>Zarejestruj się</h1>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Podaj swoje imie</mat-label>
+      <input matInput formControlName="name" placeholder="Imie" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Podaj swojego maila</mat-label>
+      <input
+        matInput
+        formControlName="email"
+        placeholder="krecik@nabicie.pl"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Podaj swoje hasło</mat-label>
+      <input
+        matInput
+        [type]="hide ? 'password' : 'text'"
+        formControlName="password"
+        required
+      />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+    </mat-form-field>
+    <button mat-raised-button id="submit" (click)="submit()">
+      Zarejestruj
+    </button>
+    <br />
+
+    <span
+      >Nie masz konta ? Możesz klinąć w
+      <a href="" routerLink="/login">link</a>
+      by się zarejestrować</span
+    >
+  </div>
+</div>

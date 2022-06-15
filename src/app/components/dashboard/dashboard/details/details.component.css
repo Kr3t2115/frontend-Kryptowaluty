@@ -1,0 +1,14 @@
+.cryptoInfo {
+  border: 1px solid black;
+  width: 500px;
+  height: 300px;
+  text-align: center;
+  padding: 20px;
+}
+.cryptoInfo i {
+  margin: 20px;
+}
+
+.cryptoInfo h2 {
+  margin: 10px;
+}

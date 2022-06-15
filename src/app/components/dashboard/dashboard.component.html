@@ -1,0 +1,19 @@
+<div *ngIf="!authenticated">
+  <h1>{{ working }}</h1>
+</div>
+
+<div *ngIf="authenticated">
+  <div>
+    <ul>
+      <h1>Monitor</h1>
+      <li><a routerLink="live" routerLinkActive="active">Dane na żywo</a></li>
+      <h1>Zacznij inwestować</h1>
+
+      <li><a routerLink="start" routerLinkActive="active">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+<div style="width: 80%; height: 100%; margin-left: 20%">
+  <router-outlet></router-outlet>
+</div>

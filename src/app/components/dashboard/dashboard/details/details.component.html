@@ -1,0 +1,57 @@
+<div class="cryptoInfo" *ngFor="let info of data">
+  <h1 style="text-align: center">{{ info.name }}</h1>
+  <img src="{{ info.image.small }}" alt="{{ info.name }} image" />
+  <h2>Social Media</h2>
+  <label
+    ><a
+      style="font-size: 32px"
+      href="https://facebook.com/{{ info.links.facebook_username }}"
+      target="_blank"
+      ><i class="fab fa-facebook"></i
+    ></a>
+    <a
+      style="font-size: 32px"
+      href="https://twitter.com/{{ info.links.twitter_screen_name }}"
+      target="_blank"
+      ><i class="fab fa-twitter"></i> </a
+  ></label>
+  <h3>Krypto powstało {{ info.genesis_date }}</h3>
+</div>
+
+<div>
+  <h1>Infomarcje o walucie</h1>
+  <ul *ngFor="let info of data">
+    <li>{{ info.id }}</li>
+    <li>{{ info.links.subreddit_url }}</li>
+    <li><img src="{{ info.image.small }}" alt="" /></li>
+    <li>{{ info.market_data.current_price.pln }}</li>
+    <li>{{ info.market_data.ath.pln }}</li>
+    <li>{{ info.genesis_date }}</li>
+    <li>{{ info.market_data.ath_change_percentage.pln }}</li>
+    <li>{{ info.market_data.ath_date.pln }}</li>
+    <li>
+      <a
+        style="font-size: 32px"
+        href="https://facebook.com/{{ info.links.facebook_username }}"
+        target="_blank"
+        ><i class="fab fa-facebook"></i
+      ></a>
+    </li>
+
+    <li>
+      <a
+        style="font-size: 32px"
+        href="https://twitter.com/{{ info.links.twitter_screen_name }}"
+        target="_blank"
+        ><i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<highcharts-chart
+  *ngIf="chartOptions"
+  [Highcharts]="Highcharts"
+  [options]="chartOptions"
+  style="width: 60%; height: 400px; display: block"
+></highcharts-chart>

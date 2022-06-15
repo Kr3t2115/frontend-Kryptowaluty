@@ -1,0 +1,30 @@
+<div class="header">
+  <h1>Krypto master</h1>
+
+  <ul [ngClass]="{ openMenu: toggleClass }">
+    <li><a href="#">O stronie </a></li>
+    <li><a href="#">Co oferujemy?</a></li>
+    <li><a href="#">Kontakt </a></li>
+    <li id="button">
+      <a routerLink="login"><button>Zaloguj się</button></a>
+    </li>
+  </ul>
+
+  <button
+    mat-fab
+    color="primary"
+    aria-label="Example icon button with a delete icon"
+    (click)="toggleClass = !toggleClass"
+    id="menuButton"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+</div>
+
+<div class="about">
+  <h2>
+    Ta strona została wykonana w celu sprawdzania obecnego kursu kryptowalut. W
+    dalekiej przyszłości może powstać z tego gra w której będzie można
+    inwestować za wirtualne pieniądze.
+  </h2>
+</div>

@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  margin: 0px;
+}
+.header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.39);
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  margin: 20px;
+}
+
+.header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header li {
+  float: left;
+  margin: 50px;
+}
+
+.header li a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  padding: 20px;
+  resize: none;
+}
+
+.header li:not(#button) a:hover {
+  border-bottom: 1px solid black;
+}
+
+.header li a button {
+  background-color: rgb(10, 10, 66);
+  width: 150px;
+  height: 50px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+#menuButton {
+  display: none;
+}
+
+.about {
+  width: 100%;
+  height: 88%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: linear-gradient(rgb(10, 10, 66), rgba(10, 10, 66, 0.884));
+  background-size: cover;
+  color: white;
+}
+.about h2 {
+  width: 40%;
+  margin: 80px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+@media only screen and (max-width: 600px) {
+  .header ul {
+    width: 10%;
+    height: 100vh;
+  }
+  .about h2 {
+    width: 100%;
+    font-size: medium;
+  }
+
+  .openMenu {
+    width: 100%;
+  }
+}
